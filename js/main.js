@@ -24,7 +24,6 @@ function handleMobileHeaderNavbar() {
 
         $('.dropdown-menu-item').click(function() {
             $(this).children('.dropdown-menu-sub').slideToggle(250);
-            console.log('success');
         })
     }
 }
