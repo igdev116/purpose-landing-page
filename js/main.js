@@ -1,5 +1,6 @@
 $(document).ready(function() {
     handleMobileHeaderNavbar();
+    scrollToCheckout();
 })
 
 // handle mobile header navbar
@@ -23,7 +24,21 @@ function handleMobileHeaderNavbar() {
         $('.dropdown-menu-sub').slideUp();
 
         $('.dropdown-menu-item').click(function() {
+            // $('.dropdown-menu-sub').slideUp(0);
+            
+            // setTimeout(() => {            
+            // }, timeout);
             $(this).children('.dropdown-menu-sub').slideToggle(250);
         })
     }
+}
+
+// scroll to checkout
+function scrollToCheckout() {
+    $('.checkout-down').click(function(e) {
+        e.preventDefault();
+
+        let position = $('#checkout').offset().top;
+        $('html, body').animate({scrollTop: position}, 700)
+    })
 }
