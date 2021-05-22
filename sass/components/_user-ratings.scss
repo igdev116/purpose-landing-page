@@ -1,0 +1,94 @@
+.user-ratings {
+    margin-top: 100px;
+    margin-bottom: 55px;
+
+    &-title {
+        font-size: 2.8rem;
+        font-weight: 400;
+        text-align: center;
+        width: 100%;
+
+        color: $primary-text-black-color;
+
+        @include respond(both) {
+            font-size: 2.3rem;
+            text-align: center;
+        }
+    }
+
+    &-description {
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 1.7;
+        text-align: center;
+        margin: 0 auto;
+        padding: 33px 30px 83px;
+        width: 680px;
+
+        color: $primary-text-grey-color;
+    }
+
+    .card-user-rating-container [class*="col-"] {
+        padding: 0 25px;
+    }
+}
+
+.card-user-rating {
+    border-radius: 6px;
+    box-shadow: 0 12px 24px #12263f08;
+    border: 1px solid #eff2f7;
+    padding: 25px;
+    
+    background-color: $primary-bgc;
+
+    &-container {
+        margin: 0 45px;
+
+        @include respond(phone) {
+            margin: 0;
+        }
+    }
+
+    .avatar {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+
+    .avatar img {
+        object-fit: cover;
+    }
+
+    .name {
+        font-size: 1.6rem;
+        font-weight: 600;
+
+        color: $primary-text-black-color;
+    }
+
+    .work {
+        font-size: 1.28rem;
+
+        color: $primary-text-grey-color;
+    }
+
+    .description {
+        font-size: 1.6rem;
+        line-height: 1.7;
+        margin-top: 30px;
+
+        color: $primary-text-grey-color;
+    }
+
+    .stars {
+        margin-top: 33px;
+    }
+
+    .stars > i {
+        font-size: 1.2rem;
+        margin-right: 3px;
+
+        color: #ffcc00;
+    }
+}

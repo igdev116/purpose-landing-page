@@ -1,0 +1,209 @@
+.checkout {
+    position: relative;
+
+    text-align: center;
+    background-image: linear-gradient(to right, $primary-color, #bb00ff);
+    padding: 138px 0 70px;
+
+    @include respond(phone) {
+        .break {
+            display: block;
+        }
+    }
+
+    @include respond(both) {
+        padding-bottom: 100px;
+    }
+
+    .checkout-down,
+    .btn-svg {
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        transform: translateX(-50%) rotate(180deg);
+    }
+
+    .checkout-down {
+        position: absolute;
+        top: 3px;
+        left: 50%;
+
+        font-size: 1.6rem;
+        padding: 5px;
+        transform: translateX(-50%);
+    }
+
+    .checkout-down > i {
+        animation: floating-btn 3s infinite;
+    }
+
+    .checkout-down:active > i {
+        color: $primary-text-black-color;
+    }
+
+    .title {
+        font-size: 4rem;
+        font-weight: 400;
+
+        color: $primary-text-color;
+
+        @include respond(both) {
+            font-size: 2.76rem;
+        }
+    }
+
+    .description {
+        padding: 0 192px;
+        margin: 35px 0 53px;
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 1.7;
+
+        color: $primary-text-color;
+
+        @include respond(both) {
+            padding: 0;
+        }
+    }
+
+    .btn {
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding: 15px 18px;
+    }
+
+    .btn > i {
+        margin-right: 8px;
+    }
+
+    .btn-checkout {
+        margin-right: 13px;
+
+        @include respond(phone) {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    .floating-icons {
+        justify-content: space-evenly;
+        transform: translateY(65%);
+
+        @include respond(phone) {
+            justify-content: space-between;
+        }
+    }
+
+    .floating-icon {
+        border-radius: 50%;
+        box-shadow: 0 30px 40px 0 #1f2d3d1a;
+
+        background-color: $primary-bgc;
+
+        animation: floating 3.5s infinite;
+
+        @include respond(tablet) {
+            width: 11rem !important;
+            height: 11rem !important;
+            margin-top: 0 !important;
+        }
+
+        @include respond(phone) {
+            width: 8rem !important;
+            height: 8rem !important;
+            margin-top: 0 !important;
+        }
+    }
+
+    .floating-icon svg {
+        width: 50%;
+        height: 100%;
+
+        fill: $svg-color;
+    }
+
+    .floating-icon:nth-child(1) {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .floating-icon:nth-child(2) {
+        width: 16rem;
+        height: 16rem;
+        margin-top: 50px;
+
+        animation-delay: 0.5s;
+
+        @include respond(both) {
+            display: none;
+        }
+    }
+
+    .floating-icon:nth-child(3) {
+        width: 8rem;
+        height: 8rem;
+        margin-top: -20px;
+
+        animation-delay: 1s;
+
+        @include respond(both) {
+            display: none;
+        }
+    }
+
+    .floating-icon:nth-child(4) {
+        width: 14rem;
+        height: 14rem;
+        margin-top: 50px;
+
+        animation-delay: 1.5s;
+    }
+
+    .floating-icon:nth-child(5) {
+        width: 10rem;
+        height: 10rem;
+        margin-top: -55px;
+
+        animation-delay: 2s;
+
+        @include respond(both) {
+            display: none;
+        }
+    }
+
+    .floating-icon:nth-child(6) {
+        width: 8rem;
+        height: 8rem;
+        margin-top: 70px;
+
+        animation-delay: 2.5s;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating-btn {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

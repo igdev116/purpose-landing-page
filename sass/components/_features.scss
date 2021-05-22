@@ -1,0 +1,60 @@
+.features {
+    background-color: $primary-bgc;
+
+    .title {
+        font-size: 2.8rem;
+        padding-top: 130px;
+        font-weight: 400;
+        text-align: center;
+
+        color: $primary-text-black-color;
+
+        @include respond(both) {
+            font-size: 2.3rem;
+        }
+    }
+
+    .description {
+        font-size: 1.8rem;
+        margin: 20px 0 110px;
+        font-weight: 300;
+        text-align: center;
+        padding: 0 250px;
+        line-height: 1.7;
+
+        color: $primary-text-grey-color;
+
+        @include respond(both) {
+            padding: 0;
+        }
+    }
+}
+
+.feature-card {
+    margin-bottom: 78px;
+
+    @include respond(both) {
+        text-align: center;
+    }
+
+    &-icon {
+        font-size: 4rem;
+
+        color: $primary-color;
+    }
+
+    &-title {
+        font-size: 2rem;
+        font-weight: 400;
+        margin: 55px 0 23px;
+
+        color: $primary-text-black-color;
+    }
+
+    &-description {
+        font-size: 1.6rem;
+        line-height: 1.7;
+
+        color: $primary-text-grey-color;
+    }
+}

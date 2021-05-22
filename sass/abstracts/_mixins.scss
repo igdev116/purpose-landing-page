@@ -1,0 +1,23 @@
+@mixin dropdown-item-hover {
+    transform: scale(1.05);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+
+    background-color: $dropdown-item-hover-bgc;
+}
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 576px) {@content};
+    }
+    @if $breakpoint == tablet {
+        @media (max-width: 768px) {@content};
+    }
+    @if $breakpoint == both {
+        @media (max-width: 768px) {@content};
+    }
+    @if $breakpoint == desktop {
+        @media (min-width: 769px) {@content};
+    }
+}

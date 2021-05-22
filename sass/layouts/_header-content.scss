@@ -1,0 +1,130 @@
+.header-cover-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+
+    min-height: 880px;
+    width: 100%;
+    overflow: hidden;
+
+    .cover-background {
+        position: absolute;
+        top: -28.5%;
+        left: -10px;
+        z-index: -998;
+
+        width: 130%;
+        height: 112.5%;
+        transform: rotate(-7deg);
+        border-bottom-left-radius: 48px;
+
+        background-image: linear-gradient(to right, #6e00ff, #bb00ff);
+
+        @include respond(both) {
+            transform: unset;
+            border-radius: 0;
+            height: 100%;
+        }
+    }
+
+    .right-background {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: -2;
+
+        width: 100%;
+        padding-top: 98px;
+        transform: translateY(-50%);
+
+        @include respond(both) {
+            display: none;
+        }
+    }
+
+    .right-background svg {
+        width: 100%;
+    }
+
+    .cover-shapes-background svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+        width: 100%;
+
+        @include respond(both) {
+            display: none;
+        }
+    }
+}
+
+.left-header-content {
+    margin-top: 167px;
+    padding: 0 15px;
+
+    color: $primary-text-color;
+
+    @include respond(both) {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .title-large {
+        font-size: 5.6rem;
+        font-weight: 300;
+
+        @include respond(both) {
+            font-size: 3.4rem;;
+        }
+    }
+
+    .title-small {
+        font-size: 3.2rem;
+        font-weight: 300;
+        margin: 5px 0 25px;
+
+        @include respond(both) {
+            font-size: 2.5rem;;
+        }
+    }
+
+    .description {
+        font-size: 1.8rem;
+        line-height: 1.7;
+        font-weight: 300;
+        margin-bottom: 48px;
+    }
+
+    .btn {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    .btn-primary {
+        margin-right: 25px;
+        padding: 16px 30px;
+
+        @include respond(both) {
+            margin-right: 0;
+        }
+    }
+
+    .btn-primary span {
+        margin-right: 15px;
+    }
+
+    .btn-outline {
+        padding: 15px 32px;
+
+        @include respond(both) {
+            display: none !important;
+        }
+    }
+
+    .btn-outline span {
+        margin-left: 15px;
+    }
+}

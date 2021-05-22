@@ -1,0 +1,257 @@
+.dropdown-menu {
+    position: absolute;
+    top: 30px;
+    left: -28px;
+    z-index: 999;
+
+    width: 40rem;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(15px);
+
+    background-color: $primary-bgc;
+
+    transition: 0.15s ease-out;
+    will-change: transform;
+
+    @include respond(both) {
+        left: 0;
+
+        width: 100%;
+
+        &:before {
+            display: none;
+        }
+
+        .dropdown-menu-sub-links {
+            background-color: $dropdown-menu-sub-links-bgc;
+        }
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        top: -5px;
+        left: 30px;
+
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        transform: rotate(45deg);
+
+        background-color: $primary-bgc;
+    }
+}
+
+.dropdown-menu-item {
+    position: relative;
+
+    height: 8.2rem;
+    width: 100%;
+    border-radius: 8px;
+
+    background-color: $primary-bgc;
+
+    transition: 0.15s ease-out;
+
+    @include respond(both) {
+        height: auto;
+        padding: 0;
+
+        &:last-child .dropdown-menu-sub {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
+
+    &-wrapper {
+        height: 100%;
+        padding: 10px 15px;
+
+        @include respond(both) {
+            height: 8.3rem;
+        }
+    }
+
+    svg {
+        width: 5rem;
+        margin: 13px 13px 0 0;
+
+        fill: $svg-color;
+
+        @include respond(both) {
+            width: 4rem;
+        }
+    }
+
+    &-title {
+        font-size: 1.6rem;
+        margin-bottom: 7px;
+        font-weight: 600;
+
+        color: $dropdown-title-color;
+    }
+
+    &-description {
+        font-size: 1.4rem;
+        font-weight: 400;
+
+        color: $primary-text-grey-color;
+    }
+
+    &-icon {
+        color: $dropdown-icon-color;
+    }
+
+    @include respond(desktop) {
+        &:hover {
+            @include dropdown-item-hover;
+        }
+    }
+
+    &:hover .dropdown-menu-sub {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+.dropdown-menu-sub {
+    background-color: $dropdown-menu-sub-links-bgc;
+
+    @include respond(desktop) {
+        position: absolute;
+        top: 0;
+        left: calc(100% + 12px);
+    
+        min-width: 25.6rem;
+        padding: 16px 24px;
+        border-radius: 8px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    @include respond(both) {
+        position: static;
+        
+        padding: 10px 0 0;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: -15px;
+
+        height: 100%;
+        width: 2.2rem;
+
+        background-color: transparent;
+    }
+
+    &-label {
+        font-size: 1.4rem;
+        padding: 8px 15px;
+
+        color: $primary-text-grey-color;
+    }
+
+    &-item {
+        padding: 0 15px;
+    }
+
+    &-item:last-child {
+        padding-bottom: 10px;
+    }
+
+    &-link {
+        display: block;
+        font-size: 1.6rem;
+        padding: 8px 0;
+        line-height: 1.7;
+        font-weight: 400;
+
+        color: $dropdown-title-color;
+
+        transition: 0.1s ease-out;
+    }
+
+    &-link:hover {
+        color: $sub-dropdown-text-hover-color;
+    }
+}
+
+@include respond(desktop) {
+    .nav-right-item:hover,
+    .nav-left-item:hover {
+        .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+}
+
+// second dropdown menu
+.dropdown-menu--second {
+    min-width: 56rem;
+
+    @include respond(both) {
+        min-width: 100%;
+    }
+
+    .dropdown-menu-sub-links {
+        padding: 20px 27px;
+
+        background-color: $dropdown-menu-sub-links-bgc;
+
+        cursor: default;
+    }
+}
+
+.dropdown-menu-sub-links {
+    padding-left: 30px;
+
+    @include respond(both) {
+        padding-left: 15px;
+    }
+}
+
+.dropdown-menu-sub-footer {
+    padding: 16px 27px;
+
+    cursor: default;
+
+    &-description {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-top: 12px;
+
+        color: $primary-text-grey-color;
+    }
+}
+
+// third dropdown menu
+.dropdown-menu--third {
+    min-width: 40rem;
+
+    @include respond(both) {
+        min-width: 100%;
+    }
+
+    &:before {
+        left: 70px;
+    }
+
+    .dropdown-menu-sub-links {
+        padding: 20px 15px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+
+        background-color: $dropdown-menu-sub-links-bgc;
+
+        cursor: default;
+    }
+}

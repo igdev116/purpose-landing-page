@@ -1,0 +1,76 @@
+.main-cards {
+    padding-top: 21%;
+
+    @include respond(both) {
+        padding-top: 40%;
+    }
+
+    @include respond(tablet) {
+        padding-top: 33%;
+    }
+    
+    .card {
+        padding: 40px 24px 0;
+        border: 1px solid $card-border-color;
+        box-shadow: 0 12px 24px #12263f08;
+        border-radius: 6px;
+        margin-bottom: 30px;
+    
+        transition: 0.15s ease-out;
+    
+        * {
+            text-align: center;
+        }
+    
+        background-color: $primary-bgc;
+    
+        &-img svg {
+            width: 90px;
+    
+            fill: $svg-color;
+        }
+    
+        &-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 11px 0 18px;
+    
+            color: $primary-text-black-color;
+        }
+    
+        &-description {
+            font-size: 1.6rem;
+            padding-bottom: 70px;
+    
+            color: $primary-text-grey-color;
+        }
+
+        @include respond(desktop) {
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 16px 48px #1f2d3d21;
+            }
+        }
+    }
+
+    .fluid-paragraph {
+        margin: 85px auto;
+        width: 680px;
+        font-size: 1.6rem;
+        padding: 0 24px;
+        text-align: center;;
+        line-height: 1.7;
+    
+        p {
+            color: $primary-text-grey-color;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+
+            padding: 0 12px;
+        }
+    }
+}
+
+

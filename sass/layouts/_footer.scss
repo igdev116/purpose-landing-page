@@ -1,0 +1,194 @@
+.footer {
+    position: relative;
+
+    padding-top: 40px;
+
+    background-color: $primary-bgc;
+
+    &-background {
+        position: relative;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        clip-path: ellipse(95% 68% at 50% 85%);
+        background-image: linear-gradient(50deg, $primary-color, #b0f); 
+
+        @include respond(tablet) {
+            clip-path: ellipse(110% 70% at 50% 85%);
+        }
+
+        @include respond(phone) {
+            clip-path: ellipse(160% 77% at 50% 85%);
+        }
+    }
+
+    &-background svg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        height: 100%;
+        width: 40%;
+    }
+
+    .cards {
+        margin-bottom: 130px;
+
+        @include respond(both) {
+            margin-bottom: 70px;
+        }
+    }
+}
+
+.copyright {
+    &-link {
+        display: block;
+        width: 16.8rem;
+        height: 7rem;
+    }
+
+    &-description {
+        font-size: 1.6rem;
+        line-height: 1.7;
+        padding-right: 200px;
+
+        color: $copyright-description-color;
+
+        @include respond(both) {
+            padding-right: 0;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.footer-card {
+    border-radius: 6px;
+    padding: 45px 38px 45px 22px;
+
+    color: $primary-text-color;
+
+    @include respond(phone) {
+        margin-bottom: 30px;
+    }
+
+    &-icon i {
+        font-size: 4.4rem;
+    }
+
+    &-text {
+        padding-left: 30px;
+    }
+
+    &-title {
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+
+    &-description {
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1.7;
+        margin-top: 23px;
+    }
+
+    &--left {
+        background-color: #272c44;
+    }
+
+    &--right {
+        background-color: #6e00ff;
+    }
+}
+
+.contacts {
+    @include respond(phone) {
+        margin-bottom: 60px;
+    }
+
+    .label {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+
+        color: #eff2f7;
+
+        cursor: default;
+    }
+
+    .contact-item {
+        padding: 2px 0;
+    }
+
+    .contact-link {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.7;
+        padding: 5px 0;
+
+        color: #d3dce6;
+
+        transition: 0.1s ease-out;
+    }
+
+    .contact-link:hover {
+        color: $primary-text-color;
+    }
+}
+
+.contact-options {
+    position: relative;
+
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include respond(phone) {
+        margin-top: 0;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        width: 100%;
+        height: 1px;
+        transform: translateX(-50%);
+
+        background: radial-gradient(ellipse at center, rgba(222, 228, 239, 0.2) 0, rgba(255, 255, 255, 0) 75%);
+    }
+
+    .copyright-date {
+        font-size: 1.4rem;
+
+        color: #d3dce6;
+
+        @include respond(phone) {
+            text-align: center;
+        }
+    }
+
+    .list {
+        @include respond(phone) {
+            justify-content: center !important;
+            margin-top: 25px;
+        }
+    }
+
+    .item-link {
+        font-size: 1.7rem;
+        padding: 10px;
+        margin-left: 10px;
+
+        color: #d3dce6;
+
+        transition: 0.1s ease-out;
+    }
+
+    .item-link:hover {
+        color: $primary-text-color;
+    }
+}

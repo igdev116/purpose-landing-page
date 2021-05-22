@@ -1,0 +1,64 @@
+.navbar-top {
+    position: relative;
+    z-index: 999;
+
+    padding: 23px 0;
+    border-bottom: 1px solid $navbar-bottom-border-color;
+
+    @include respond(both) {
+        margin: 0 15px 15px;
+    }
+
+    .nav-left-item {
+        font-weight: 600;
+
+        cursor: pointer;
+    }
+
+    .nav-left-item__country {
+        @include respond(both) {
+            display: none;
+        }
+    }
+
+    .nav-left-item__country--phone {
+        display: none;
+        
+        @include respond(both) {
+            display: block;
+        }
+    }
+
+    .nav-left-item--label {
+        margin-right: 25px;
+        font-weight: 400;
+
+        color: $primary-text-white-color;
+
+        cursor: default;
+
+        @include respond(both) {
+            display: none;
+        }
+    }
+
+    .nav-left-item .nav-icon {
+        margin-right: 10px;
+    }
+    
+    .nav-right-item {
+        padding: 0 8px;
+        margin-right: 8px;
+        font-weight: 600;
+
+        cursor: pointer;
+    }
+
+    .nav-right-item:first-child {
+        margin-right: 0;
+    }
+
+    .nav-right-item:last-child {
+        margin-right: 0;
+    }
+}

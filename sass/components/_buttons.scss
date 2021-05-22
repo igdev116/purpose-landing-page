@@ -1,0 +1,58 @@
+.btn {
+    padding: 11px 21px;
+    border-radius: 300px;
+    display: inline-block;
+
+    color: $primary-text-black-color;
+
+    transition: 0.13s ease-out;
+
+    cursor: pointer;    
+    
+    &-primary {
+        background-color: $button-white-bgc;
+    }
+
+    &-primary:hover {
+        background-color: $button-white-hover-bgc;
+    }
+
+    &-text {
+        margin-left: 7px;
+    }
+
+    &-outline {
+        border: 1px solid $primary-text-color;
+        
+        color: $primary-text-color;
+        background-color: transparent;
+    }
+
+    &-outline:hover {
+        background-color: $primary-bgc;
+
+        color: $primary-text-black-color;
+    }
+
+    &-up {
+        transform: translateY(0);
+    }
+
+    &-up:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &-up:active {
+        transform: translateY(-1px);
+    }
+
+    &-checkout {
+        color: $primary-text-color;
+        background-color: #273444;
+    }
+
+    &-checkout:hover {
+        background-color: #19212C;
+    }
+}

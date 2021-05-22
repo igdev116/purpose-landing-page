@@ -1,0 +1,137 @@
+.intro-container {
+    padding: 96px 0;
+
+    background-color: $primary-bgc;
+
+    @include respond(both) {
+        padding: 80px 0;
+    }
+
+    .row:last-child {
+        margin-top: 95px;
+
+        @include respond(both) {
+            margin-top: 20px;
+        }
+    }
+}
+
+.intro {
+    margin: auto 0;
+    padding-right: 12px;
+
+    &-img {
+        @include respond(both) {
+            text-align: center;
+        }
+    }
+
+    &-title {
+        font-size: 2.8rem;
+        font-weight: 400;
+
+        color: $primary-text-black-color;
+
+        @include respond(both) {
+            margin-top: 30px;
+            font-size: 2.5rem;
+        }
+    }
+
+    &-description {
+        line-height: 1.7;
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin: 40px 0 63px;
+
+        color: $primary-text-grey-color;
+
+        @include respond(phone) {
+            margin: 30px 0 50px;
+        }
+    }
+
+    &-btn {
+        position: relative;
+
+        font-size: 1.6rem;
+
+        color: $primary-color;
+    }
+
+    &-btn:after {
+        position: absolute;
+        content: "";
+        bottom: -7px;
+        left: 50%;
+
+        width: 35%;
+        height: 3px;
+        border-radius: 300px;
+
+        background-color: $primary-color;
+
+        transition: 0.18s ease-out;
+
+        @include respond(both) {
+            left: 0;
+
+            width: 100%;
+        }
+
+        @include respond(desktop) {
+            transform: translateX(-50%);
+        }
+    }
+
+    &-btn:hover:after {
+        // left: 0;
+        // right: 0;
+
+        width: 100%;
+    }
+
+    &--left {
+        padding-right: 0;
+        margin-top: 95px;
+    }
+
+    &--left > &-description {
+        margin: 25px 0 20px;
+    }
+
+    &-item {
+        padding: 8px 0;
+        margin: 7px 0;
+    }
+
+    &-item span {
+        font-size: 1.6rem;
+        font-weight: 600;
+
+        color: $primary-text-black-color;
+    }
+
+    .badge {
+        font-size: 1.6rem;
+        margin-right: 18px;
+    }
+
+    .badge:after {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+    }
+
+    &-item:nth-child(1) > i {
+        color: $primary-color;
+    }
+
+    &-item:nth-child(2) > i {
+        color: $primary-yellow-color;
+    }
+
+    &-item:nth-child(3) > i {
+        color: $primary-green-color;
+    }
+}
