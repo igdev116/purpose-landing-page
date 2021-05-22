@@ -35,11 +35,14 @@
     }
 
     .checkout-down > i {
+        color: $primary-text-black-color;
+        opacity: 0.8;
+
         animation: floating-btn 3s infinite;
     }
 
     .checkout-down:active > i {
-        color: $primary-text-black-color;
+        opacity: 0.9;
     }
 
     .title {
@@ -177,33 +180,5 @@
         margin-top: 70px;
 
         animation-delay: 2.5s;
-    }
-}
-
-@keyframes floating {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes floating-btn {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(4px);
-    }
-
-    100% {
-        transform: translateY(0);
     }
 }
