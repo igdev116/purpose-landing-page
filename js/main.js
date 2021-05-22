@@ -44,10 +44,21 @@ function scrollToCheckout() {
 }
 
 const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 'auto',
-    // spaceBetween: 30,
+    autoHeight: true,
+    speed: 550,
     pagination: {
         el: '.swiper-pagination',
         clickable: true
     },
+    breakpoints: {
+        100: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        992: {
+            slidesPerView: 'auto'
+        }
+    }
 });
