@@ -119,24 +119,27 @@
 }
 
 .dropdown-menu-sub {
-    background-color: $dropdown-menu-sub-links-bgc;
+    background-color: $primary-bgc;
 
     @include respond(desktop) {
         position: absolute;
         top: 0;
         left: calc(100% + 12px);
-    
+
         min-width: 25.6rem;
-        padding: 16px 24px;
+        padding: 15px 5px;
         border-radius: 8px;
         opacity: 0;
         visibility: hidden;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     }
 
     @include respond(both) {
         position: static;
-        
-        padding: 10px 0 0;
+
+        padding-top: 10px;
+
+        background-color: $dropdown-menu-sub-links-bgc;
     }
 
     &:after {
@@ -153,7 +156,7 @@
 
     &-label {
         font-size: 1.4rem;
-        padding: 8px 15px;
+        padding: 10px 15px 8px;
 
         color: $primary-text-grey-color;
     }
@@ -162,8 +165,10 @@
         padding: 0 15px;
     }
 
-    &-item:last-child {
-        padding-bottom: 10px;
+    @include respond(both) {
+        &-item:last-child {
+            padding-bottom: 10px;
+        }
     }
 
     &-link {
@@ -203,11 +208,16 @@
     }
 
     .dropdown-menu-sub-links {
-        padding: 20px 27px;
+        padding: 20px;
 
         background-color: $dropdown-menu-sub-links-bgc;
 
         cursor: default;
+
+        @include respond(both) {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
     }
 }
 
@@ -220,7 +230,7 @@
 }
 
 .dropdown-menu-sub-footer {
-    padding: 16px 27px;
+    padding: 16px 20px;
 
     cursor: default;
 
@@ -246,12 +256,17 @@
     }
 
     .dropdown-menu-sub-links {
-        padding: 20px 15px;
+        padding: 20px;
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
 
         background-color: $dropdown-menu-sub-links-bgc;
 
         cursor: default;
+
+        @include respond(both) {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
     }
 }
